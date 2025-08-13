@@ -1,0 +1,23 @@
+/* EJ Carpentry & Maintenance Custom Colors */
+
+/* Accent Blue */
+.bg-accent, .themesflat-button.bg-accent, .text-accent, .themesflat-headings .sep.has-icon .icon-wrap > i, .themesflat-icon-box.accent-color .icon-wrap, .themesflat-pagination ul li .page-numbers:hover, .themesflat-pagination ul li .page-numbers.current, .themesflat-pagination .page-prev-next > li a:hover:after, .themesflat-tabs.style-1 .tab-content ul span.fa, .themesflat-testimonials .sep.has-width.accent-bg, .themesflat-headings .sep.has-width.accent-bg, .header-style-2 #main-nav > ul > li > a:after, .themesflat-icon-box.style-1.light-bg .icon-wrap:before, .themesflat-button.bg-white:hover:before, .themesflat-image-box.has-icon:hover .icon-wrap, .owl-theme .owl-nav [class*="owl-"], .custom .tp-bullet:hover, .custom .tp-bullet.selected, .custom.tparrows:hover, .themesflat-progress.style-1 .progress-animate, .themesflat-accordions.has-icon.iconstyle-2 .accordion-item.active .accordion-heading > .inner:before, .owl-theme .owl-dots .owl-dot:hover span, .owl-theme .owl-dots .owl-dot.active span, .themesflat-team.style-1 .socials li a:hover, .widget.widget_list .list-item > a:hover:before, .widget.widget_lastest_twitter li:hover .icon-wrap.has-width.w30, .comment-list.style-2 .comment-text .socials > a:hover, .themesflat-accordions.style-4 .accordion-item.active .accordion-heading, .themesflat-tabs.style-2 .tab-title .item-title.active, .themesflat-button.bg-light-white:hover:before, .flat-content-wrap .sep.has-width.accent-bg, .themesflat-testimonials.has-width.w35 .icon-wrap, .themesflat-price-table.style-1 .tag, .themesflat-price-table .sep.has-width.accent-bg, .has-effect-icon .elm-link a.icon-1:hover {
+  background-color: #3b59a1 !important;
+  color: #fff !important;
+}
+.text-accent { color: #3b59a1 !important; }
+.border-accent, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus {
+  border-color: #3b59a1 !important;
+}
+
+/* Dark backgrounds for footer and banners */
+.bg-dark, #footer, #bottom { background-color: #1d1d1d !important; color: #fff !important; }
+
+/* Light backgrounds */
+.bg-light-grey, .bg-light { background-color: #f3f4f6 !important; color: #222 !important; }
+
+/* General text */
+body, p, .text-main { color: #222 !important; }
+
+/* Button hover */
+.themesflat-button.bg-accent:hover, .themesflat-button.bg-white:hover { background-color: #222 !important; color: #fff !important; border-color: #222 !important; }
