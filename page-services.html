@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>EJ Carpentry & Maintenance - Page Template</title>
+    <meta name="author" content="EJ Carpentry & Maintenance">
+    <meta name="description" content="Professional carpentry and maintenance services in Perth Metro area. Specializing in second fix carpentry, decking, timber ceilings & walls, and property maintenance.">
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="assets/img/ezfalcon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/img/ezfalcon.png">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="assets/css/colors/color1.css" id="colors">
+    <style>
+        /* ------- Page-level overrides (light grey page, white cards) ------- */
+        body{background:#f5f6f8;}
+        .services-stack{max-width:1340px;margin:64px auto 40px;padding:0 24px;display:flex;flex-direction:column;gap:72px;}
+    
+  
+        /* ------- Service card (white box) ------- */
+        .service-block{position:relative;background:#fff;border:1px solid #e9eef7;border-radius:14px;box-shadow:0 10px 34px rgba(35,83,164,.08);overflow:hidden}
+        .service-number{position:absolute;top:8px;right:14px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(56px,10vw,120px);line-height:1;color:#000;opacity:.06;pointer-events:none}
+        .service-head{padding:24px 26px 0}
+        .service-title{font-family:'Montserrat',sans-serif;font-weight:800;color:#0d1828;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(20px,2.2vw,30px);margin:0}
+    
+        /* Layout: image left, text right */
+        .service-inner{display:grid;grid-template-columns:1.3fr 1fr;grid-template-areas:"media text";align-items:center;gap:22px;padding:18px 18px 24px}
+        .media-wrap{grid-area:media;background:transparent;padding:0}
+        .text-wrap{grid-area:text;padding:8px 8px 8px 10px;display:flex;flex-direction:column;gap:16px}
+    
+        /* Single big image */
+        .service-main-img{width:100%;height:100%;max-height:520px;border-radius:12px;object-fit:cover;object-position:center;display:block;box-shadow:0 6px 22px rgba(0,0,0,.10)}
+        /* prevent clipping on very wide screens */
+        @media (min-width:1200px){.service-main-img{max-height:560px}}
+    
+        /* Large description paragraphs */
+        .service-lede{font-family:'Open Sans',sans-serif;color:#121926;line-height:1.85;font-size:clamp(16px,1.8vw,19px);letter-spacing:.01em;margin:0}
+        .service-lede + .service-lede{margin-top:12px}
+    
+        /* Feature chips */
+        .feature-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:2px}
+        .chip{background:#f5f8fc;color:#2353a4;border:1px solid #d7e4ff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:1rem;padding:10px 16px;border-radius:10px}
+    
+        /* CTAs */
+        .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+        .btn-primary,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 18px;font-family:'Montserrat',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;transition:all .18s ease}
+        .btn-primary{background:#2353a4;color:#fff;border:1px solid #1e4690;box-shadow:0 8px 22px rgba(35,83,164,.22)}
+        .btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(35,83,164,.28);background:#1f4a98}
+        .btn-secondary{background:#fff;color:#2353a4;border:1px solid #cfe0ff}
+        .btn-secondary:hover{background:#f4f8ff;border-color:#bcd0ff}
+    
+        /* Divider */
+        .section-sep{height:1px;background:rgba(0,0,0,.12);margin:26px 0}
+    
+        /* Mobile stacking */
+        @media (max-width:980px){
+          .service-inner{grid-template-columns:1fr;grid-template-areas:"media" "text";gap:16px}
+          .text-wrap{padding:0 6px 6px}
+          .service-main-img{max-height:420px}
+        }
+        @media (max-width:700px){
+          .services-stack{gap:54px}
+          .service-head{padding:18px 18px 0}
+          .service-inner{padding:12px 12px 18px}
+          .service-main-img{max-height:360px}
+        }
+      </style>
+
+</head>
+<body class="header-fixed page no-sidebar header-style-2 topbar-style-2 menu-has-search">
+
+<!-- ========== NAVIGATION BAR START (DO NOT REMOVE) ========== -->
+<!-- ========== NAVIGATION BAR START (DO NOT REMOVE) ========== -->
+<!-- ========== NAVIGATION BAR START (DO NOT REMOVE) ========== -->
+<div id="site-header-wrap">
+
+    <style>
+    /* Top Bar (unchanged) */
+    .top-bar-desktop-only{
+      background:#f5f5f5;border-bottom:1px solid #e0e0e0;
+      font-family:'Open Sans',sans-serif;font-size:1em;color:#444;
+      display:flex;justify-content:center;align-items:center;
+    }
+    #top-bar-inner{width:100%;display:flex;justify-content:center;}
+    .top-bar-inner-wrap{width:100%;display:flex;justify-content:center;}
+    .top-bar-content-centered-better{
+      display:flex;justify-content:center;align-items:center;gap:48px;
+      padding:8px 0;width:100%;
+    }
+    .top-bar-content-centered-better .service-area{color:#2353a4;font-weight:500;font-size:1em;display:flex;align-items:center;gap:6px;}
+    .top-bar-content-centered-better .phone{color:#444;font-weight:500;font-size:1em;display:flex;align-items:center;gap:6px;}
+    .topbar-separator{color:#bbb;font-size:1.2em;font-weight:400;margin:0 24px;}
+    @media (max-width:900px){.top-bar-desktop-only{display:none!important;}}
+    
+    /* ===== Fixed Header (bulletproof) ===== */
+    #site-header{
+      position:fixed !important;
+      top:0;left:0;right:0;
+      z-index:1100;
+      background:#fff;
+      box-shadow:0 2px 5px rgba(0,0,0,.08);
+    }
+    
+    /* Some themes toggle .is-fixed — keep behaviour consistent */
+    #site-header.is-fixed{
+      position:fixed !important; top:0 !important;
+    }
+    
+    /* Smooth height transitions if the header shrinks on scroll later */
+    #site-header,
+    .custom-navbar-container{transition:height .2s ease, box-shadow .2s ease;}
+    </style>
+    
+    <script>
+    /* Push page content down by the exact header height */
+    (function(){
+      function setHeaderOffset(){
+        var header=document.getElementById('site-header');
+        if(!header) return;
+        var h=header.offsetHeight;
+        document.documentElement.style.setProperty('--header-offset', h+'px');
+        document.body.style.paddingTop = h + 'px';
+      }
+      window.addEventListener('load', setHeaderOffset);
+      window.addEventListener('resize', setHeaderOffset);
+    })();
+    </script>
+    <header id="site-header">
+        <div class="custom-navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html" rel="home" class="main-logo">
+                    <img src="assets/ezimg/logo/wlogo.png" alt="EJ Carpentry & Maintenance" width="186" height="39" data-retina="assets/img/logo-small@2x.png" data-width="186" data-height="39">
+                </a>
+            </div>
+            <nav class="navbar-center-menu" id="main-navbar-menu">
+                <ul class="navbar-menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="page-about.html">ABOUT</a></li>
+                    <li class="menu-item-has-children services-dropdown">
+                        <a href="page-services.html">SERVICES</a>
+                        <ul class="sub-menu">
+                            <li><a href="page-services.html">All services</a></li>
+                            <li><a href="page-services.html#decking">Decking</a></li>
+                            <li><a href="page-services.html#timber">Timber Ceilings &amp; Walls</a></li>
+                            <li><a href="page-services.html#maintenance">Property Maintenance</a></li>
+
+                            <li><a href="page-services.html#second-fix">Second Fix Carpentry</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="page-contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-right-group">
+                <a href="page-contact.html" class="get-a-quote-btn">GET A QUOTE</a>
+                <button class="navbar-hamburger" id="navbar-hamburger" aria-label="Open menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+</div>
+<!-- ========== NAVIGATION BAR END (DO NOT REMOVE) ========== -->
+
+<!-- HERO SECTION -->
+<div class="services-hero-section" style="position: relative; width: 100%; height: 340px; background: url('assets/ezimg/home/hero/slider-2.jpg') center center/cover no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+        <h1 style="color: #fff; font-family: 'Montserrat', sans-serif; font-size: 2.2em; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 10px 0; text-align: center;">Our Services</h1>
+        <div style="font-family: 'Open Sans', sans-serif; color: #fff; font-size: 1.08em; font-weight: 400; letter-spacing: 0.2px; text-align: center;">Expert Carpentry &amp; Maintenance Services in Perth</div>
+    </div>
+</div>
+
+<!-- SERVICES NAV BUTTONS -->
+<div class="services-nav-buttons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin: 40px 0 48px 0;">
+    <a class="service-nav-btn" href="#second-fix">Second Fix Carpentry</a>
+    <a class="service-nav-btn" href="#decking">Decking</a>
+    <a class="service-nav-btn" href="#timber">Timber Ceilings &amp; Walls</a>
+    <a class="service-nav-btn" href="#maintenance">Property Maintenance</a>
+    <a class="service-nav-btn" href="#more">More Services / Custom</a>
+</div>
+
+<style>
+.service-nav-btn {
+    display: inline-block;
+    background: #2353a4;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.08em;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(35,83,164,0.08);
+    margin-bottom: 8px;
+}
+.service-nav-btn:hover, .service-nav-btn:focus {
+    background: #19305a;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(35,83,164,0.15);
+}
+@media (max-width: 700px) {
+    .services-nav-buttons {
+        gap: 10px;
+    }
+    .service-nav-btn {
+        font-size: 0.98em;
+        padding: 10px 16px;
+    }
+}
+</style>
+
+ <!-- ===================== SERVICES ===================== -->
+ <div class="services-stack">
+
+    <!-- 01 Second Fix Carpentry -->
+    <section id="second-fix" class="service-block">
+      <div class="service-number">01</div>
+      <div class="service-head">
+        <h2 class="service-title">Second Fix Carpentry</h2>
+      </div>
+      <div class="service-inner">
+        <div class="media-wrap">
+          <img class="service-main-img" src="assets/img/imagebox/image-box-1-370x250.jpg" alt="Second fix carpentry work" />
+        </div>
+        <div class="text-wrap">
+          <p class="service-lede">
+            Flawless finishes that elevate your space. We install and detail doors, frames, skirting, architraves, and built-ins with laser-level precision, tight joins, and clean lines—so everything looks like it was meant to be there from day one.
+          </p>
+          <p class="service-lede">
+            Surfaces are prepped properly, hardware aligned to the millimetre, and edges eased for a refined feel. We colour-match fillers and keep caulking razor-straight so your trim work looks premium up close and from across the room.
+          </p>
+
+          <div class="feature-chips">
+            <span class="chip">Doors &amp; Frames</span>
+            <span class="chip">Skirting &amp; Architraves</span>
+            <span class="chip">Custom Cabinetry</span>
+            <span class="chip">Hardware &amp; Fittings</span>
+          </div>
+
+          <div class="cta-row">
+            <a href="page-contact.html" class="btn-primary">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-sep" aria-hidden="true"></div>
+
+    <!-- 02 Decking -->
+    <section id="decking" class="service-block">
+      <div class="service-number">02</div>
+      <div class="service-head">
+        <h2 class="service-title">Decking</h2>
+      </div>
+      <div class="service-inner">
+        <div class="media-wrap">
+          <img class="service-main-img" src="assets/img/project/project-1-440x280.jpg" alt="Decking project" />
+        </div>
+        <div class="text-wrap">
+          <p class="service-lede">
+            Built for Perth's climate and for life outside. From hardwoods to composites, we design and construct decks that stay flat, drain well and feel great underfoot—with clean fascia lines and hidden fixings for a premium finish.
+          </p>
+          <p class="service-lede">
+            Subframes are engineered for longevity with correct spans, fixings and ventilation. We can integrate steps, screens and lighting so your deck feels built-in, not bolted on.
+          </p>
+
+          <div class="feature-chips">
+            <span class="chip">Timber &amp; Composite</span>
+            <span class="chip">Weather-Resistant</span>
+            <span class="chip">Low-Maintenance</span>
+            <span class="chip">Steps &amp; Screens</span>
+          </div>
+
+          <div class="cta-row">
+            <a href="page-contact.html" class="btn-primary">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-sep" aria-hidden="true"></div>
+
+    <!-- 03 Timber Ceilings & Walls -->
+    <section id="timber" class="service-block">
+      <div class="service-number">03</div>
+      <div class="service-head">
+        <h2 class="service-title">Timber Ceilings &amp; Walls</h2>
+      </div>
+      <div class="service-inner">
+        <div class="media-wrap">
+          <img class="service-main-img" src="assets/img/project/project-2-440x280.jpg" alt="Timber ceilings and walls" />
+        </div>
+        <div class="text-wrap">
+          <p class="service-lede">
+            Warm up your interiors with natural texture. From battened walls to sleek ceiling cladding, we custom-fit timber solutions that integrate with lighting, services and architecture for a refined, modern look.
+          </p>
+          <p class="service-lede">
+            We coordinate with sparkies and HVAC placement to keep lines uninterrupted. Options include battens, slats and sheet cladding with natural oils or durable clear coats that showcase the grain.
+          </p>
+
+          <div class="feature-chips">
+            <span class="chip">Ceiling Slats</span>
+            <span class="chip">Wall Battens</span>
+            <span class="chip">Acoustic Options</span>
+            <span class="chip">Custom Finishes</span>
+          </div>
+
+          <div class="cta-row">
+            <a href="page-contact.html" class="btn-primary">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-sep" aria-hidden="true"></div>
+
+    <!-- 04 Property Maintenance -->
+    <section id="maintenance" class="service-block">
+      <div class="service-number">04</div>
+      <div class="service-head">
+        <h2 class="service-title">Property Maintenance</h2>
+      </div>
+      <div class="service-inner">
+        <div class="media-wrap">
+          <img class="service-main-img" src="assets/img/project/project-3-440x280.jpg" alt="Property maintenance works" />
+        </div>
+        <div class="text-wrap">
+          <p class="service-lede">
+            Keep your property safe, functional and looking sharp. We handle planned upkeep and on-the-spot fixes with clear communication and tidy work practices—ideal for homeowners, strata and small businesses.
+          </p>
+          <p class="service-lede">
+            From sticky doors and swelling timber to minor reinstatements, we work efficiently and leave spaces tidy, with practical recommendations after each visit.
+          </p>
+
+          <div class="feature-chips">
+            <span class="chip">Repairs</span>
+            <span class="chip">Inspections</span>
+            <span class="chip">Preventative Care</span>
+            <span class="chip">Strata Friendly</span>
+          </div>
+
+          <div class="cta-row">
+            <a href="page-contact.html" class="btn-primary">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-sep" aria-hidden="true"></div>
+
+    <!-- 05 More Services / Custom -->
+    <section id="more" class="service-block">
+      <div class="service-number">05</div>
+      <div class="service-head">
+        <h2 class="service-title">More Services / Custom</h2>
+      </div>
+      <div class="service-inner">
+        <div class="media-wrap">
+          <img class="service-main-img" src="assets/img/imagebox/image-box-6-370x215.jpg" alt="Custom carpentry and more" />
+        </div>
+        <div class="text-wrap">
+          <p class="service-lede">
+            Storage solutions, feature niches, structural rectifications and more. If it's timber-related, we can usually help—let's chat through your idea and map a practical plan.
+          </p>
+          <p class="service-lede">
+            We can sketch concepts, advise on materials and finishes, and provide itemised quotes so you can choose with confidence.
+          </p>
+
+          <div class="feature-chips">
+            <span class="chip">Custom Carpentry</span>
+            <span class="chip">Storage &amp; Shelving</span>
+            <span class="chip">Minor Structural</span>
+            <span class="chip">Insurance Jobs</span>
+          </div>
+
+          <div class="cta-row">
+            <a href="page-contact.html" class="btn-primary">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Smooth scroll for hash links -->
+  <script>
+    document.querySelectorAll('.service-nav-btn, .navbar-menu a[href^="#"]').forEach(function(link){
+      link.addEventListener('click',function(e){
+        const href=this.getAttribute('href');
+        if(href&&href.startsWith('#')){
+          const target=document.querySelector(href);
+          if(target){e.preventDefault();window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-90,behavior:'smooth'});}
+        }
+      });
+    });
+  </script>
+
+
+
+<!-- ========== FOOTER START (DO NOT REMOVE) ========== -->
+
+<footer id="footer" class="custom-footer">
+    <div class="footer-container">
+        <!-- Footer Main Content -->
+        <div class="footer-main">
+            <!-- Company Info & Contact -->
+            <div class="footer-section company-info">
+                <img src="assets/ezimg/logo/blogo.png" alt="EJ Carpentry & Maintenance Logo" class="footer-logo">
+                <p class="footer-description">
+                    Professional carpentry and maintenance services across Perth Metro. Quality workmanship, reliable service, and exceptional results for homes and businesses.
+                </p>
+                <a href="page-contact.html" class="footer-quote-btn">GET A QUOTE</a>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="fa fa-phone"></i>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:0406560725">0406 560 725</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-envelope"></i>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:info@ejcarpentry.com.au">info@ejcarpentry.com.au</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-map-marker"></i>
+                        <div>
+                            <span class="contact-label">Service Area</span>
+                            <span>Perth Metro, WA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Services -->
+            <div class="footer-section services-section">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-services-list">
+                    <li><a href="page-services.html#second-fix">Second Fix Carpentry</a></li>
+                    <li><a href="page-services.html#decking">Decking & Outdoor</a></li>
+                    <li><a href="page-services.html#timber">Timber Ceilings & Walls</a></li>
+                    <li><a href="page-services.html#maintenance">Property Maintenance</a></li>
+                    <li><a href="page-services.html#more">More Services / Custom</a></li>
+                </ul>
+            </div>
+            <!-- Social Media & Quote -->
+            <div class="footer-section social-quote-section">
+                <h3 class="footer-heading">Connect With Us</h3>
+                <div class="social-media-links">
+                    <a href="https://www.instagram.com/ejcarpentryperth/" class="social-link instagram">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.google.com/search?sca_esv=08bd8e8cec846723&rlz=1C1RXQR_enAU1032AU1032&biw=1920&bih=919&sxsrf=AE3TifPeW49uuhjkOarSR4eZjUa18ZDEkw:1755004799136&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7YZXuAmds8Ypba2EKTiUzhorrMTKtE_ER0H8uKC8iXpspwUWaAnAVx9rw0KBTqGuSzBZEDGRECk1MGV3msphlt_KM6PScI9pFAr9roP03vHrYOXSw%3D%3D&q=EJ+Carpentry+%26+Maintenance+Reviews&sa=X&ved=2ahUKEwiFxYatroWPAxUmumMGHX4YATAQ0bkNegQIHhAC" class="social-link google">
+                        <span>Leave us a Google review!</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-about.html">About Us</a></li>
+                    <li><a href="page-projects.html">Our Projects</a></li>
+                    <li><a href="page-contact.html">Contact</a></li>
+                    <li><a href="page-contact.html">Get Free Quote</a></li>
+                    <li><a href="page-testimonial.html">Testimonials</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Trust Indicators -->
+        <div class="footer-trust-section">
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <i class="fa fa-shield"></i>
+                    <span>Licensed & Insured</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa fa-clock-o"></i>
+                    <span>Reliable & Punctual</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa fa-star"></i>
+                    <span>Quality Guaranteed</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa fa-users"></i>
+                    <span>Local Perth Business</span>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-copyright">
+                    © <span id="footer-year"></span> EJ Carpentry & Maintenance. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms of Service</a>
+                    <span class="separator">|</span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== FOOTER END ========== -->
+
+<!-- Navbar CSS (copied from index.html) -->
+<style>
+.custom-navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 90px;
+    background: #fff;
+    position: relative;
+    z-index: 100;
+}
+.navbar-logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+.navbar-center-menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+.navbar-menu {
+    display: flex;
+    gap: 38px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.navbar-menu > li {
+    position: relative;
+}
+.navbar-menu > li > a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.08em;
+    font-weight: 500;
+    color: #1a2330;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 2px;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    outline: none;
+    line-height: 90px;
+    display: inline-block;
+}
+.navbar-menu > li > a:hover,
+.navbar-menu > li > a:focus {
+    color: #2353a4;
+}
+.services-dropdown {
+    position: relative;
+}
+.services-dropdown > a:after {
+    content: '\25BC';
+    font-size: 0.7em;
+    margin-left: 7px;
+    vertical-align: middle;
+    color: #2353a4;
+}
+.services-dropdown .sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 210px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(35,83,164,0.10);
+    border-radius: 0 0 8px 8px;
+    z-index: 1000;
+    padding: 10px 0;
+}
+.services-dropdown:hover .sub-menu,
+.services-dropdown:focus-within .sub-menu {
+    display: block;
+}
+.services-dropdown .sub-menu li {
+    width: 100%;
+}
+.services-dropdown .sub-menu a {
+    display: block;
+    padding: 10px 24px;
+    color: #2353a4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    background: none;
+}
+.services-dropdown .sub-menu a:hover {
+    background: #2353a4;
+    color: #fff;
+}
+.navbar-right-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+.navbar-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 28px;
+    color: #2353a4;
+    font-weight: bold;
+    line-height: 1;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.navbar-hamburger:hover {
+    background: #f0f0f0;
+}
+@media (max-width: 900px) {
+    .top-bar-desktop-only {
+        display: none !important;
+    }
+    .custom-navbar-container {
+        padding: 0 4px;
+        height: 76px;
+    }
+    .navbar-logo {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .navbar-logo img {
+        width: 98px !important;
+        height: auto !important;
+        max-height: 32px;
+    }
+    .navbar-center-menu {
+        display: none !important;
+    }
+    .navbar-hamburger {
+        color: #2353a4 !important;
+        background: none !important;
+        border: none;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1;
+        padding: 8px;
+        border-radius: 4px;
+        transition: all 0.3s;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar-hamburger:focus,
+    .navbar-hamburger:active,
+    .navbar-hamburger:visited,
+    .navbar-hamburger:hover {
+        color: #2353a4 !important;
+        background: none !important;
+        outline: none !important;
+    }
+    .navbar-menu-mobile {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100vw;
+        background: #fff;
+        box-shadow: 0 4px 16px rgba(35,83,164,0.10);
+        z-index: 2000;
+        padding: 20px 0 10px 0;
+        align-items: flex-start;
+    }
+    .navbar-menu-mobile li {
+        width: 100%;
+        padding: 0 24px;
+        margin-bottom: 8px;
+    }
+    .navbar-menu-mobile li a {
+        font-size: 1.1em;
+        color: #222;
+        font-weight: 500;
+        line-height: 2.2;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        padding: 8px 0;
+    }
+    .navbar-menu-mobile .services-dropdown .sub-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        min-width: 0;
+        padding: 0;
+        display: none;
+    }
+    .navbar-menu-mobile .services-dropdown.open .sub-menu {
+        display: block;
+    }
+    .navbar-menu-mobile .services-dropdown > a:after {
+        content: '\25BC';
+        font-size: 0.7em;
+        margin-left: 7px;
+        vertical-align: middle;
+        color: #222;
+    }
+    .navbar-menu-mobile .mobile-quote-btn {
+        margin-top: 16px;
+        padding: 0 24px;
+    }
+    .navbar-menu-mobile .mobile-quote-btn a {
+        background: #2353a4;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 1em;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 3px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        box-shadow: none;
+        white-space: nowrap;
+        height: auto;
+        line-height: 1.7;
+        vertical-align: middle;
+        text-align: center;
+        transition: background 0.2s, color 0.2s;
+        display: block;
+        width: 100%;
+    }
+    .navbar-menu-mobile .mobile-quote-btn a:hover {
+        background: #19305a;
+        color: #fff;
+    }
+    .get-a-quote-btn {
+        display: none !important;
+    }
+    .navbar-right-group {
+        gap: 0;
+    }
+}
+</style>
+<style>
+.get-a-quote-btn {
+    background: #2353a4 !important;
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 1em !important;
+    padding: 8px 24px !important;
+    border: none !important;
+    border-radius: 3px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    height: auto !important;
+    line-height: 1.7 !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    transition: background 0.2s, color 0.2s !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+}
+@media (max-width: 900px) {
+    .get-a-quote-btn {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
+}
+.get-a-quote-btn:hover {
+    background: #19305a !important;
+    color: #fff !important;
+}
+</style>
+<!-- Navbar JS (copied from index.html) -->
+<script>
+// Hamburger menu toggle for mobile
+const hamburger = document.getElementById('navbar-hamburger');
+const mainMenu = document.getElementById('main-navbar-menu');
+let mobileMenu = null;
+function closeMobileMenu() {
+    if (mobileMenu) {
+        mobileMenu.remove();
+        mobileMenu = null;
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+}
+function openMobileMenu() {
+    closeMobileMenu();
+    mobileMenu = document.createElement('ul');
+    mobileMenu.className = 'navbar-menu-mobile';
+    mobileMenu.innerHTML = `
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="page-about.html">ABOUT</a></li>
+        <li class="services-dropdown">
+            <a href="page-services.html" tabindex="0">SERVICES</a>
+            <ul class="sub-menu">
+                <li><a href="page-services.html#second-fix">Second Fix Carpentry</a></li>
+                <li><a href="page-services.html#decking">Decking</a></li>
+                <li><a href="page-services.html#timber">Timber Ceilings &amp; Walls</a></li>
+                <li><a href="page-services.html#maintenance">Property Maintenance</a></li>
+                <li><a href="page-services.html#more">More Services / Custom</a></li>
+            </ul>
+        </li>
+        <li><a href="page-projects.html">PROJECTS</a></li>
+        <li><a href="page-contact.html">CONTACT</a></li>
+        <li class="mobile-quote-btn"><a href="page-contact.html">GET A QUOTE</a></li>
+    `;
+    document.querySelector('.custom-navbar-container').appendChild(mobileMenu);
+    // Dropdown toggle for services
+    const servicesDropdown = mobileMenu.querySelector('.services-dropdown > a');
+    const subMenu = mobileMenu.querySelector('.services-dropdown .sub-menu');
+    servicesDropdown.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+        this.setAttribute('aria-expanded', this.parentElement.classList.contains('open'));
+    });
+    servicesDropdown.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+            this.setAttribute('aria-expanded', this.parentElement.classList.contains('open'));
+        }
+    });
+    subMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            closeMobileMenu();
+        });
+    });
+    mobileMenu.querySelectorAll('> li > a:not([href="page-services.html"])').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    hamburger.setAttribute('aria-expanded', 'true');
+}
+hamburger.addEventListener('click', function() {
+    if (mobileMenu) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+});
+hamburger.setAttribute('aria-expanded', 'false');
+hamburger.setAttribute('tabindex', '0');
+hamburger.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        if (mobileMenu) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+});
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 900) {
+        closeMobileMenu();
+    }
+});
+</script>
+<!-- ========== END NAVBAR CSS & JS ========== -->
+
+<!-- Footer CSS (copied from index.html) -->
+<style>
+.custom-footer {
+    background: #1d1d1d;
+    color: #fff;
+    padding: 60px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #2c2c2c;
+}
+.company-info {
+    grid-column: 1;
+}
+.footer-logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.footer-description {
+    color: #bfc8d6 !important;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-family: 'Open Sans', sans-serif;
+}
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.contact-item i {
+    color: #2353a4;
+    font-size: 16px;
+    margin-top: 2px;
+    width: 16px;
+}
+.contact-item div {
+    display: flex;
+    flex-direction: column;
+}
+.contact-label {
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.contact-item a, .contact-item span {
+    color: #bfc8d6;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+.contact-item a:hover {
+    color: #2353a4;
+}
+.services-section {
+    grid-column: 2;
+}
+.footer-heading {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.footer-services-list, .footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-services-list a, .footer-links-list a {
+    color: #bfc8d6;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.2s;
+    display: block;
+    padding: 2px 0;
+}
+.footer-services-list a:hover, .footer-links-list a:hover {
+    color: #2353a4;
+}
+.social-quote-section {
+    grid-column: 3;
+}
+.social-media-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+.social-link {
+    display: block;
+    color: #bfc8d6;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.2s;
+    padding: 8px 0;
+}
+.social-link:hover {
+    color: #2353a4;
+}
+.footer-quote-section {
+    background: rgba(35, 83, 164, 0.1);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(35, 83, 164, 0.2);
+    margin-bottom: 25px;
+}
+.footer-quote-section h4 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+.footer-quote-section p {
+    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+}
+.footer-quote-btn {
+    display: inline-block;
+    background: #2353a4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    text-align: center;
+    width: auto;
+    margin-bottom: 25px;
+}
+.footer-quote-btn:hover {
+    background: #19305a;
+    color: #fff;
+}
+.quick-links {
+    grid-column: 4;
+}
+.footer-trust-section {
+    padding: 30px 0;
+    border-bottom: 1px solid #2c2c2c;
+}
+.trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #bfc8d6;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.trust-item i {
+    color: #2353a4;
+    font-size: 16px;
+}
+.footer-bottom {
+    padding: 20px 0;
+}
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-copyright {
+    color: #bfc8d6;
+    font-size: 0.9em;
+}
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.footer-legal a {
+    color: #bfc8d6;
+    text-decoration: none;
+    font-size: 0.85em;
+    transition: color 0.2s;
+}
+.footer-legal a:hover {
+    color: #2353a4;
+}
+.separator {
+    color: #666;
+    font-size: 0.85em;
+}
+@media (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .company-info {
+        grid-column: 1 / -1;
+    }
+    .services-section {
+        grid-column: 1;
+    }
+    .social-quote-section {
+        grid-column: 2;
+    }
+    .quick-links {
+        grid-column: 1 / -1;
+    }
+}
+@media (max-width: 700px) {
+    .custom-footer {
+        padding: 40px 0 0 0;
+    }
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .company-info, .services-section, .social-quote-section, .quick-links {
+        grid-column: 1;
+    }
+    .trust-indicators {
+        gap: 20px;
+    }
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+<script>
+// Set current year in copyright
+    document.addEventListener('DOMContentLoaded', function() {
+        var yearSpan = document.getElementById('footer-year');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+</script>
+</body>
+</html> 

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Featured Projects - EJ Carpentry</title>
+<link rel="stylesheet" href="styles.css"> <!-- link to your main CSS -->
+<style>
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header placeholder */
+header {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* Featured Projects Grid */
+.featured-projects {
+  padding: 60px 0;
+}
+.featured-projects h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.featured-projects p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.project-card .content {
+  padding: 20px;
+  flex-grow: 1;
+}
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #2353a4;
+}
+.project-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+.project-card .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #2353a4;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+.project-card .btn:hover {
+  background: #1f4a98;
+}
+
+/* Extra Section */
+.extra-section {
+  background: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+.extra-section h2 {
+  margin-bottom: 15px;
+}
+.extra-section p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #555;
+}
+.extra-section .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #2353a4;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.extra-section .btn:hover {
+  background: #1f4a98;
+}
+
+/* Footer placeholder */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  margin-top: 60px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h2>EJ Carpentry</h2>
+  </div>
+</header>
+
+<section class="featured-projects">
+  <div class="container">
+    <h1>Featured Projects</h1>
+    <p>Here’s a selection of our recent work, showcasing the detail, craftsmanship, and finish EJ Carpentry is known for.</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="assets/img/project1.jpg" alt="Project 1">
+        <div class="content">
+          <h3>Jarrah Deck & Steps</h3>
+          <p>Durable jarrah decking with hidden fixings, LED step lights, and a weather-resistant subframe.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/img/project2.jpg" alt="Project 2">
+        <div class="content">
+          <h3>Feature Ceiling Slats</h3>
+          <p>Custom acoustic timber ceiling slats, perfectly aligned with lighting and air-conditioning fixtures.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/img/project3.jpg" alt="Project 3">
+        <div class="content">
+          <h3>Second Fix Carpentry</h3>
+          <p>Flawless skirting, architraves, and door installation with precision hardware alignment.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/img/project4.jpg" alt="Project 4">
+        <div class="content">
+          <h3>Entry Wall Battens</h3>
+          <p>Warm timber battens wrapping around an entryway with concealed fixings and consistent spacing.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="extra-section container">
+  <h2>Why Choose EJ Carpentry?</h2>
+  <p>We combine high-quality materials, attention to detail, and exceptional customer service to bring your vision to life. Whether it’s decking, feature walls, or precision second fix carpentry, we deliver work that lasts.</p>
+  <a href="page-contact.html" class="btn">Get a Quote</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 EJ Carpentry. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
