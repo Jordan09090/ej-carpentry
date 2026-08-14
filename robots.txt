@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ej-carpentry.com.au/sitemap.xml

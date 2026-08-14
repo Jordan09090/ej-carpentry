@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Redirecting…</title>
+
+  <!-- Instant redirect (HTML) -->
+  <meta http-equiv="refresh" content="0; url=/coming-soon" />
+
+  <!-- Help search engines treat the other page as the real one -->
+  <link rel="canonical" href="/page-coming-soon.html" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Instant redirect (JS) -->
+  <script>
+    // Change this to your actual Coming Soon URL
+    var TARGET = "/page-coming-soon.html"; // e.g. "/coming-soon.html" or "https://example.com/coming-soon"
+    location.replace(TARGET); // replace() avoids trapping the Back button
+  </script>
+
+  <style>
+    html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { display: flex; align-items: center; justify-content: center; }
+    .wrap { text-align: center; }
+    a { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p>Taking you to the right page… <a href="/page-coming-soon.html">Continue</a></p>
+  </div>
+  <!-- If JS is disabled, the meta refresh handles it; and the link above is a manual fallback. -->
+</body>
+</html>
